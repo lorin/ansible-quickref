@@ -65,18 +65,18 @@ delay               Used with "until", seconds to wait between retries. Default:
 Host variables that modify ansible behavior
 -------------------------------------------
 
-============================   ===================================================
+============================   ======================================================================
 Parameter                      Description
-============================   ===================================================
+============================   =========================================================================================
 ansible_ssh_host               hostname to connect to for a given host
 ansible_ssh_port               ssh port to connect to for a given host
 ansible_ssh_user               ssh user to connect as for a given host
 ansible_ssh_pass               ssh password to connect as for a given host
 ansible_ssh_private_key_file   ssh private key file to connect as for a given host
-ansible_connection             connection type to use for a given host
+ansible_connection             connection type to use for a given host (e.g. `local`)
 ansible_python_interpreter     python interpreter to use
 ansible\_\*\_interpreter       interpreter to use
-============================   ===================================================
+============================   =========================================================================================
 
 
 
