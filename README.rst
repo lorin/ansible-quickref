@@ -47,7 +47,7 @@ when                Boolean. Only run task when this evaluates to True. Default:
 ignore_errors       Boolean. If True, ansible will treat task as if it has succeeded even if it returned an
                     error, Default: ``False``
 module              More verbose notation for specifying module parameters
-environment
+environment         Mapping that contains environment variables to pass
 with_items          List of items to iterate over
 with_nested         List of list of items to iterate over in nested fashion
 with_fileglob       List of local files to iterate over, described using shell fileglob notation
