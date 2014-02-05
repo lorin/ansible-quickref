@@ -55,20 +55,20 @@ also have a copied version of that variable with underscores instead
 Parameter                        Description
 ============================     =======================================================================
 ansible_ec2_ami_id               AMI
-ansible_ec2_ami_launch_index
-ansible_ec2_ami_manifest_path
-ansible_ec2_hostname
-ansible_ec2_instance_action
-ansible_ec2_instance_id
-ansible_ec2_instance_type
-ansible_ec2_kernel_id
-ansible_ec2_local_hostname
-ansible_ec2_local_ipv4
-ansible_ec2_mac
-ansible_ec2_public_hostname
-ansible_ec2_public_ipv4
-ansible_ec2_reservation_id
-ansible_ec2_security_groups
+ansible_ec2_ami_launch_index     tbd
+ansible_ec2_ami_manifest_path    tbd
+ansible_ec2_hostname             hostname
+ansible_ec2_instance_action      tbd
+ansible_ec2_instance_id          instance id
+ansible_ec2_instance_type        instance type
+ansible_ec2_kernel_id            AKI
+ansible_ec2_local_hostname       internal hostname
+ansible_ec2_local_ipv4           internal IP address
+ansible_ec2_mac                  MAC address
+ansible_ec2_public_hostname      public hostname
+ansible_ec2_public_ipv4          public IP address
+ansible_ec2_reservation_id       reservation id
+ansible_ec2_security_groups      security groups
 ansible_ec2_instance_type        instance type
 ansible_ec2_placement_region     region name
 ============================     =======================================================================
