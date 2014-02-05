@@ -13,8 +13,8 @@ instance_ids         List of instance ids
 instances            List of instance dicts (see table below)
 ===================  =======================================================================
 
-Instance dicts
-~~~~~~~~~~~~~~
+EC2 instance dicts
+~~~~~~~~~~~~~~~~~~
 
 ===================  =======================================================================
 Parameter            Description
@@ -45,17 +45,16 @@ Values returned by ec2_facts module
 -----------------------------------
 
 This will connect to the EC2 metadata service and set the variables, prefixed
-with ``ansible_ec2_``. Any variable that has a dash (-) in the name will
-also have a copied version of that variable with underscores instead
-(e.g., ``ansible_ec2_ami-id`` and ``ansible_ec2_ami_id``).
+with ``ansible_ec2_``. Any variable that has a dash (``-``)  or colon (``:``) in
+the name will also have a copied version of that variable with underscores
+instead (e.g., ``ansible_ec2_ami-id`` and ``ansible_ec2_ami_id``).
 
 Here we just show the underscore-replaced versions
 
 
-=============================                                          =======================================================================
+=====================================================================  =======================================================================
 Parameter                                                              Description
-=============================                                          =======================================================================
-ansible_ec2_ami_id                                                     AMI
+=====================================================================  =======================================================================
 ansible_ec2_ami_launch_index                                           ? (e.g., `0`)
 ansible_ec2_ami_manifest_path                                          ? (e.g., `(unknown)`)
 ansible_ec2_hostname                                                   hostname
@@ -83,7 +82,7 @@ ansible_ec2_placement_availability_zone                                availabil
 ansible_ec2_placement_region                                           region (e.g., ``us-east-1``)
 ansible_ec2_profile                                                    profile (e.g. ``default-paravitual``)
 ansible_ec2_user_data                                                  user data
-=============================                                          =======================================================================
+=====================================================================  =======================================================================
 
 Values returned by ec2_ami module
 -----------------------------------
