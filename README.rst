@@ -48,12 +48,13 @@ Values returned by ec2_facts module
 This will connect to the EC2 metadata service and set the variables, prefixed
 with ansible_ec2_. Any variable that has a dash (-) in the name will
 also have a copied version of that variable with underscores instead
-(e.g., `ansible_ec2_ami-id` and `ansible_ec2_ami_id`)
+(e.g., ``ansible_ec2_ami-id`` and ``ansible_ec2_ami_id``).
 
 
-============================     =======================================================================
+
+=============================    =======================================================================
 Parameter                        Description
-============================     =======================================================================
+=============================    =======================================================================
 ansible_ec2_ami_id               AMI
 ansible_ec2_ami_launch_index     tbd
 ansible_ec2_ami_manifest_path    tbd
@@ -71,7 +72,7 @@ ansible_ec2_reservation_id       reservation id
 ansible_ec2_security_groups      security groups
 ansible_ec2_instance_type        instance type
 ansible_ec2_placement_region     region name
-============================     =======================================================================
+=============================    =======================================================================
 
 
 Play parameters
