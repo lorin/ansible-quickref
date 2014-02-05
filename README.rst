@@ -41,38 +41,49 @@ hypervisor           hypervisor type
 ===================  =======================================================================
 
 
-
 Values returned by ec2_facts module
 -----------------------------------
 
 This will connect to the EC2 metadata service and set the variables, prefixed
-with ansible_ec2_. Any variable that has a dash (-) in the name will
+with ``ansible_ec2_``. Any variable that has a dash (-) in the name will
 also have a copied version of that variable with underscores instead
 (e.g., ``ansible_ec2_ami-id`` and ``ansible_ec2_ami_id``).
 
+Here we just show the underscore-replaced versions
 
 
-=============================    =======================================================================
-Parameter                        Description
-=============================    =======================================================================
-ansible_ec2_ami_id               AMI
-ansible_ec2_ami_launch_index     tbd
-ansible_ec2_ami_manifest_path    tbd
-ansible_ec2_hostname             hostname
-ansible_ec2_instance_action      tbd
-ansible_ec2_instance_id          instance id
-ansible_ec2_instance_type        instance type
-ansible_ec2_kernel_id            AKI
-ansible_ec2_local_hostname       internal hostname
-ansible_ec2_local_ipv4           internal IP address
-ansible_ec2_mac                  MAC address
-ansible_ec2_public_hostname      public hostname
-ansible_ec2_public_ipv4          public IP address
-ansible_ec2_reservation_id       reservation id
-ansible_ec2_security_groups      security groups
-ansible_ec2_instance_type        instance type
-ansible_ec2_placement_region     region name
-=============================    =======================================================================
+=============================                                          =======================================================================
+Parameter                                                              Description
+=============================                                          =======================================================================
+ansible_ec2_ami_id                                                     AMI
+ansible_ec2_ami_launch_index                                           ? (e.g., `0`)
+ansible_ec2_ami_manifest_path                                          ? (e.g., `(unknown)`)
+ansible_ec2_hostname                                                   hostname
+ansible_ec2_instance_action                                            tbd
+ansible_ec2_instance_id                                                instance id
+ansible_ec2_instance_type                                              instance type
+ansible_ec2_kernel_id                                                  AKI
+ansible_ec2_local_hostname                                             internal hostname
+ansible_ec2_local_ipv4                                                 internal IP address
+ansible_ec2_mac                                                        MAC address (e.g., ``22:00:0a:1f:b2:34``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_device_number    device number (e.g., ``0``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_local_hostname   internal hostname for interface (e.g., ``ip-10-31-178-52.ec2.internal``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_local_ipv4s      internal IP for interface (e.g., ``10.31.178.52``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_mac              MAC  address (e.g., ``22:00:0a:1f:b2:34``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_owner_id         Owner ID (e.g., ``635425997824``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_public_hostname  public hostname (e.g., ``ec2-107-20-42-224.compute-1.amazonaws.com``)
+ansible_ec2_network_interfaces_macs_XX_XX_XX_XX_XX_XX_public_ipv4s"    public IP (e.g., ``107.20.42.224``)
+ansible_ec2_public_hostname                                            public hostname (e.g., ``ec2-107-20-42-224.compute-1.amazonaws.com``)
+ansible_ec2_public_key                                                 ssh public key
+ansible_ec2_public_ipv4                                                public IP address (e.g., ``107.20.42.224``)
+ansible_ec2_reservation_id                                             reservation id
+ansible_ec2_security_groups                                            comma-delimited list of security groups (e.g., ``ssh,ping``)
+ansible_ec2_instance_type                                              instance type (e.g., ``t1.micro``)
+ansible_ec2_placement_availability_zone                                availability zone (e.g., ``us-east-1b``)
+ansible_ec2_placement_region                                           region (e.g., ``us-east-1``)
+ansible_ec2_profile                                                    profile (e.g. ``default-paravitual``)
+ansible_ec2_user_data                                                  user data
+=============================                                          =======================================================================
 
 Values returned by ec2_ami module
 -----------------------------------
