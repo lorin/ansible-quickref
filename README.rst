@@ -45,11 +45,33 @@ hypervisor           hypervisor type
 Values returned by ec2_facts module
 -----------------------------------
 
-=========================   =======================================================================
-Parameter                   Description
-=========================   =======================================================================
-ansible_ec2_instance_type   instance type
-=========================   =======================================================================
+This will connect to the EC2 metadata service and set the variables, prefixed
+with ansible_ec2_. Any variable that has a dash (-) in the name will
+also have a copied version of that variable with underscores instead
+(e.g., `ansible_ec2_ami-id` and `ansible_ec2_ami_id`)
+
+
+============================     =======================================================================
+Parameter                        Description
+============================     =======================================================================
+ansible_ec2_ami_id               AMI
+ansible_ec2_ami_launch_index
+ansible_ec2_ami_manifest_path
+ansible_ec2_hostname
+ansible_ec2_instance_action
+ansible_ec2_instance_id
+ansible_ec2_instance_type
+ansible_ec2_kernel_id
+ansible_ec2_local_hostname
+ansible_ec2_local_ipv4
+ansible_ec2_mac
+ansible_ec2_public_hostname
+ansible_ec2_public_ipv4
+ansible_ec2_reservation_id
+ansible_ec2_security_groups
+ansible_ec2_instance_type        instance type
+ansible_ec2_placement_region     region name
+============================     =======================================================================
 
 
 Play parameters
