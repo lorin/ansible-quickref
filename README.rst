@@ -3,6 +3,54 @@ Quick reference
 
 Quick reference to parameters and special variables.
 
+Values returned by ec2 module
+------------------------------
+
+===================  =======================================================================
+Parameter            Description
+===================  =======================================================================
+instance_ids         List of instance ids
+instances            List of instance dicts
+===================  =======================================================================
+
+Instance dicts:
+
+===================  =======================================================================
+Parameter            Description
+===================  =======================================================================
+id                   instance id
+ami_launch_index     tbd
+private_ip           internal IP address (not routable outside of EC2)
+private_dns_name     internal DNS name (not routable outside of EC2)
+public_ip            public IP address
+public_dns_name      public DNS name
+state_code           tbd
+architecture         CPU architecture
+image_id             AMI
+key_name             keypair name
+placement            tbd
+kernel               AKI
+ramdisk              ARI
+launch_time          time instance was launched
+instance_type        instance type
+root_device_type     type of root device (ephemeral, EBS)
+root_device_name     name of root device
+state                state of instance
+hypervisor           hypervisor type
+===================  =======================================================================
+
+
+
+Values returned by ec2_facts module
+-----------------------------------
+
+=========================   =======================================================================
+Parameter                   Description
+=========================   =======================================================================
+ansible_ec2_instance_type   instance type
+=========================   =======================================================================
+
+
 Play parameters
 ---------------
 
@@ -100,3 +148,4 @@ Parameter                      Description                                      
 ansible_date_time              Dictionary that contains date info                                  ``{"date": "2013-10-02", "day": "02", "epoch": "1380756810", "hour": "19","iso8601": "2013-10-02T23:33:30Z","iso8601_micro": "2013-10-02T23:33:30.036070Z","minute": "33","month": "10","second": "30","time": "19:33:30","tz": "EDT","year": "2013"}``
 =================              ==================================================                  =====================================================================================================================================================================================================================================================
 
+Variables returned by
