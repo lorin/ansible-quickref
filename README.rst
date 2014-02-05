@@ -10,10 +10,11 @@ Values returned by ec2 module
 Parameter            Description
 ===================  =======================================================================
 instance_ids         List of instance ids
-instances            List of instance dicts
+instances            List of instance dicts (see table below)
 ===================  =======================================================================
 
-Instance dicts:
+Instance dicts
+~~~~~~~~~~~~~~
 
 ===================  =======================================================================
 Parameter            Description
