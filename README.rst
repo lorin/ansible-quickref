@@ -294,6 +294,7 @@ Parameter           Description
 ==================  =========================================================================================
 name                Name of the task, displayed when task runs (e.g., ``Ensure foo is present``).
 action              Name of module to specify. Legacy format, prefer specifying module name directly instead
+args                A dictionary of arguments. See docs for ``ec2_tag`` for an example.
 include             Name of a separate YAML file that includes additional tasks.
 register            Record the result to the specified variable (e.g., ``result``)
 delegate_to         Run task on specified host instead.
