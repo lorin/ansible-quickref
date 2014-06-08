@@ -345,12 +345,99 @@ ansible\_\*\_interpreter       interpreter to use
 Variables returned by setup
 ===========================
 
+These are the same as the output of Facts described in a previous section.
+Currently, this just has one variable defined.
+
 =================              ==================================================                  =====================================================================================================================================================================================================================================================
 Parameter                      Description                                                         Example
 =================              ==================================================                  =====================================================================================================================================================================================================================================================
 ansible_date_time              Dictionary that contains date info                                  ``{"date": "2013-10-02", "day": "02", "epoch": "1380756810", "hour": "19","iso8601": "2013-10-02T23:33:30Z","iso8601_micro": "2013-10-02T23:33:30.036070Z","minute": "33","month": "10","second": "30","time": "19:33:30","tz": "EDT","year": "2013"}``
 =================              ==================================================                  =====================================================================================================================================================================================================================================================
 
+Return value of a loop
+======================
+
+If you register a variable with a task that has an iteration, e.g.::
+
+    - command: echo {{ item }}
+      with_items:
+        - foo
+        - bar
+        - baz
+      register: echos
+
+Then the result is a dictionary with the following values:
+
+==========      =============================================================
+Field name      Description
+==========      =============================================================
+changed         boolean, true if anything has changed
+msg             a message such as "All items completed"
+results         a list that contains the return value for each loop iteration
+==========      =============================================================
+
+For example, the ``echos`` variable would have the following value::
+
+    {
+        "changed": true,
+        "msg": "All items completed",
+        "results": [
+            {
+                "changed": true,
+                "cmd": [
+                    "echo",
+                    "foo"
+                ],
+                "delta": "0:00:00.002780",
+                "end": "2014-06-08 16:57:52.843478",
+                "invocation": {
+                    "module_args": "echo foo",
+                    "module_name": "command"
+                },
+                "item": "foo",
+                "rc": 0,
+                "start": "2014-06-08 16:57:52.840698",
+                "stderr": "",
+                "stdout": "foo"
+            },
+            {
+                "changed": true,
+                "cmd": [
+                    "echo",
+                    "bar"
+                ],
+                "delta": "0:00:00.002736",
+                "end": "2014-06-08 16:57:52.911243",
+                "invocation": {
+                    "module_args": "echo bar",
+                    "module_name": "command"
+                },
+                "item": "bar",
+                "rc": 0,
+                "start": "2014-06-08 16:57:52.908507",
+                "stderr": "",
+                "stdout": "bar"
+            },
+            {
+                "changed": true,
+                "cmd": [
+                    "echo",
+                    "baz"
+                ],
+                "delta": "0:00:00.003050",
+                "end": "2014-06-08 16:57:52.979928",
+                "invocation": {
+                    "module_args": "echo baz",
+                    "module_name": "command"
+                },
+                "item": "baz",
+                "rc": 0,
+                "start": "2014-06-08 16:57:52.976878",
+                "stderr": "",
+                "stdout": "baz"
+            }
+        ]
+    }
 
 EC2 stuff
 =========
