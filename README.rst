@@ -341,6 +341,27 @@ delay               Used with "until", seconds to wait between retries. Default:
 
 ==================  =========================================================================================
 
+Complex args
+============
+There are two ways to specify complex arguments, using the action/module parameter or using
+the args parameter.
+
+action/module parameter::
+
+    - action:
+        module: ec2_tag
+        resource: vol-abcdefg
+        tags:
+          Name: my-volume
+
+args parameter::
+
+    - ec2_tag: resource=vol-abcdefg
+      args:
+        tags:
+          Name: my-volume
+
+
 
 
 Host variables that modify ansible behavior
