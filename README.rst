@@ -13,9 +13,28 @@ These are variables that are always defined by ansible.
 ============================   =========================================================================================================================================================================================================
 Parameter                      Description
 ============================   =========================================================================================================================================================================================================
+hostvars                       A dict whose keys are Ansible host names and values are variable names
 groups                         A dict whose keys are Ansible group names and values are list of hostnames that are members of the group. Includes ``all`` and ``ungrouped`` groups: ``{"all": [...], "web": [...], "ungrouped": [...]}``
 inventory_hostname             Name of the current host as known by ansible.
 ============================   =========================================================================================================================================================================================================
+
+These can be useful if you want to use a variable associated with a different host. For
+example, if you are using the EC2 dynamic inventory and have a single host with
+the tag "Name=foo", and you want to access the instance id in a different play,
+you can do something like this::
+
+    - hosts: tag_Name_foo
+      tasks:
+        - action: ec2_facts
+
+      ...
+
+    - hosts: localhost
+      vars:
+        instance_id: {{ hostvars[groups['tag_Name_foo'][0]]['ansible_ec2_instance_id'] }}
+      tasks:
+        - name: print out the instance id for the foo instance
+          debug: msg=instance-id is {{ instance_id }}
 
 Facts
 =====
