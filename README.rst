@@ -327,6 +327,7 @@ ignore_errors       Boolean. If True, ansible will treat task as if it has succe
 module              More verbose notation for specifying module parameters
 environment         Mapping that contains environment variables to pass
 failed_when         Specify criteria for identifying task has failed (e.g., ``"'FAILED' in command_result.stderr"``)
+changed_when        Specify criteria for identifying task has changed server state
 with_items          List of items to iterate over
 with_nested         List of list of items to iterate over in nested fashion
 with_fileglob       List of local files to iterate over, described using shell fileglob notation
