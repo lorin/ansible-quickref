@@ -521,6 +521,62 @@ state                state of instance
 hypervisor           hypervisor type
 ===================  =======================================================================
 
+hostvars from ec2.py dynamic inventory script
+---------------------------------------------
+
+ec2.py defines the following host variables:
+
+=============================  =======================================================================
+Variable                       Description
+=============================  =======================================================================
+ec2__in_monitoring_element
+ec2_ami_launch_index
+ec2_architecture
+ec2_client_token
+ec2_dns_name
+ec2_ebs_optimized
+ec2_eventsSet
+ec2_group_name
+ec2_hypervisor
+ec2_id                         instance id
+ec2_image_id
+ec2_instance_profile
+ec2_instance_type
+ec2_ip_address
+ec2_item
+ec2_kernel
+ec2_key_name
+ec2_launch_time
+ec2_monitored
+ec2_monitoring
+ec2_monitoring_state
+ec2_persistent
+ec2_placement
+ec2_platform
+ec2_previous_state
+ec2_previous_state_code
+ec2_private_dns_name
+ec2_private_ip_address
+ec2_public_dns_name
+ec2_ramdisk
+ec2_reason
+ec2_region
+ec2_requester_id
+ec2_root_device_name
+ec2_root_device_type
+ec2_security_group_ids
+ec2_security_group_names
+ec2_spot_instance_request_id
+ec2_state
+ec2_state_code
+ec2_state_reason
+ec2_subnet_id
+ec2_tag_Name
+ec2_tag_env
+ec2_virtualization_type
+ec2_vpc_id
+=============================  =======================================================================
+
 
 Values returned by ec2_facts module
 -----------------------------------
