@@ -339,7 +339,7 @@ with_dict           Loop through the elements of a hash
 until               Boolean, task will retry until evaluates true or until ``retries``
 retries             Used with "until", number of times to retry. Default: ``3``
 delay               Used with "until", seconds to wait between retries. Default: ``10``
-
+run_once            If true, runs task on only one of the hosts
 ==================  =========================================================================================
 
 Complex args
