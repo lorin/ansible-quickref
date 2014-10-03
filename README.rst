@@ -14,6 +14,7 @@ These are variables that are always defined by ansible.
 Parameter                      Description
 ============================   =========================================================================================================================================================================================================
 hostvars                       A dict whose keys are Ansible host names and values are dicts that map variable names to values
+group_names                    A list of all groups that the current host is a member of
 groups                         A dict whose keys are Ansible group names and values are list of hostnames that are members of the group. Includes ``all`` and ``ungrouped`` groups: ``{"all": [...], "web": [...], "ungrouped": [...]}``
 inventory_hostname             Name of the current host as known by ansible.
 ============================   =========================================================================================================================================================================================================
