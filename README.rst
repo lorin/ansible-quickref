@@ -23,6 +23,7 @@ hostvars                       A dict whose keys are Ansible host names and valu
 group_names                    A list of all groups that the current host is a member of
 groups                         A dict whose keys are Ansible group names and values are list of hostnames that are members of the group. Includes ``all`` and ``ungrouped`` groups: ``{"all": [...], "web": [...], "ungrouped": [...]}``
 inventory_hostname             Name of the current host as known by ansible.
+play_hosts                     A list of inventory hostnames that are active in the current play (or current batch if running serial)
 ============================   =========================================================================================================================================================================================================
 
 These can be useful if you want to use a variable associated with a different host. For
@@ -65,22 +66,32 @@ Play parameters
 ===================  =======================================================================
 Parameter            Description
 ===================  =======================================================================
-name                 Name of the play, displayed when play runs (e.g., ``Deploy a foo``).
+any_errors_fatal
+gather_facts         Specify whether to gather facts or not
+handlers             List of handlers
 hosts                Hosts in the play (e.g., ``webservers``).
-vars                 Dictionary of variables.
-vars_files           List of files that contain dictionary of variables.
-vars_prompt          Description of vars that user will be prompted to specify.
-user                 User to ssh as. Default: ``root`` (unless overriden in config file)
+include              Include a playbook defined in another file
+max_fail_percentage
+name                 Name of the play, displayed when play runs (e.g., ``Deploy a foo``).
+pre_tasks            List of tasks to execute before roles.
+port                 Remote ssh port to connect to
+post_tasks           List of tasks to execute after roles.
 remote_user          Alias for ``user``.
+role_names
+roles                List of roles.
+serial               Integer that indicates how many hosts Ansible should manage at a single
+su
+su_user
 sudo                 Boolean that indicates whether ansible should use sudo (e.g., ``True``).
 sudo_user            If sudo'ing, user to sudo as. Defaults: ``root``.
 tasks                List of tasks.
-roles                List of roles.
-pre_tasks            List of tasks to execute before roles.
-post_tasks           List of tasks to execute after roles.
-serial               Integer that indicates how many hosts Ansible should manage at a single
+user                 User to ssh as. Default: ``root`` (unless overriden in config file)
                      time. (e.g., ``3``).
-max_fail_percentage
+no_log
+vars                 Dictionary of variables.
+vars_files           List of files that contain dictionary of variables.
+vars_prompt          Description of vars that user will be prompted to specify.
+vault_password
 ===================  =======================================================================
 
 Task parameters
