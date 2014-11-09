@@ -113,7 +113,7 @@ sudo_user           If sudo'ing, user to sudo as.
 when                Boolean. Only run task when this evaluates to True. Default: ``True``
 ignore_errors       Boolean. If True, ansible will treat task as if it has succeeded even if it returned an
                     error, Default: ``False``
-module              More verbose notation for specifying module parameters
+module              More verbose notation for specifying module parameters. See docs for ``ec2`` for an example.
 environment         Mapping that contains environment variables to pass
 failed_when         Specify criteria for identifying task has failed (e.g., ``"'FAILED' in command_result.stderr"``)
 changed_when        Specify criteria for identifying task has changed server state
@@ -428,4 +428,15 @@ Parameter            Description
 ===================  =======================================================================
 volume_id            volume id
 device               device name
+===================  =======================================================================
+
+Values returned by ec2_key module
+---------------------------------
+
+===================  =======================================================================
+Parameter            Description
+===================  =======================================================================
+key.fingerprint      SSH public key fingerprint
+key.name             SSH keypair name
+key.private_key      SSH private key string (only if creating new key)
 ===================  =======================================================================
