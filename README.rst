@@ -290,16 +290,16 @@ EC2 instance dicts
 Parameter            Description
 ===================  =======================================================================
 id                   instance id
-ami_launch_index     tbd
+ami_launch_index     instance index within a reservation (between 0 and N-1) if N launched
 private_ip           internal IP address (not routable outside of EC2)
 private_dns_name     internal DNS name (not routable outside of EC2)
 public_ip            public IP address
 public_dns_name      public DNS name
-state_code           tbd
+state_code           reason code for the state change
 architecture         CPU architecture
 image_id             AMI
 key_name             keypair name
-placement            tbd
+placement            location where the instance was launched
 kernel               AKI
 ramdisk              ARI
 launch_time          time instance was launched
