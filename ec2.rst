@@ -1,14 +1,6 @@
 EC2 stuff
 =========
 
-* ec2_
-* ec2_ami_
-* ec2_facts_
-* ec2_key_
-* ec2_vol_
-* ec2_vpc_
-* hostvars_
-
 .. _ec2:
 
 Values returned by ec2 module
