@@ -1,6 +1,16 @@
 EC2 stuff
 =========
 
+* ec2_
+* ec2_ami_
+* ec2_facts_
+* ec2_key_
+* ec2_vol_
+* ec2_vpc_
+* hostvars_
+
+.. _ec2:
+
 Values returned by ec2 module
 ------------------------------
 
@@ -38,8 +48,48 @@ state                state of instance
 hypervisor           hypervisor type
 ===================  =======================================================================
 
+.. _ec2_vpc:
+
 Values returned by ec2_vpc module
 ---------------------------------
+
+Example output::
+
+    {
+      "changed": false,
+      "invocation": {
+        "module_args": "",
+        "module_name": "ec2_vpc"
+      },
+      "subnets": [
+        {
+          "az": "us-east-1d",
+          "cidr": "10.0.0.0/24",
+          "id": "subnet-30d30549",
+          "resource_tags": {
+            "env": "production",
+            "tier": "web"
+          }
+        },
+        {
+          "az": "us-east-1d",
+          "cidr": "10.0.1.0/24",
+          "id": "subnet-43d3054a",
+          "resource_tags": {
+            "env": "production",
+            "tier": "db"
+          }
+        }
+      ],
+      "vpc": {
+        "cidr_block": "10.0.0.0/16",
+        "dhcp_options_id": "dopt-203f5742",
+        "id": "vpc-83a135e6",
+        "region": "us-east-1",
+        "state": "available"
+      },
+      "vpc_id": "vpc-83a135e6"
+    }
 
 ===================  =======================================================================
 Parameter            Description
@@ -73,6 +123,8 @@ id                   vpc id (e.g., `vpc-12345678`)
 region               ec2 region (e.g., us-east-1)
 state                state of vpc (e.g., available)
 ===================  =======================================================================
+
+.. _hostvars:
 
 hostvars from ec2.py dynamic inventory script
 ---------------------------------------------
@@ -130,6 +182,7 @@ ec2_virtualization_type
 ec2_vpc_id
 =============================  =======================================================================
 
+.. _ec2_facts:
 
 Values returned by ec2_facts module
 -----------------------------------
@@ -174,6 +227,8 @@ ansible_ec2_profile                                                    profile (
 ansible_ec2_user_data                                                  user data
 =====================================================================  =======================================================================
 
+.. _ec2_ami:
+
 Values returned by ec2_ami module
 ---------------------------------
 
@@ -184,6 +239,8 @@ image_id             AMI id
 state                state of the image
 ===================  =======================================================================
 
+.. _ec2_vol:
+
 Values returned by ec2_vol module
 ---------------------------------
 
@@ -193,6 +250,8 @@ Parameter            Description
 volume_id            volume id
 device               device name
 ===================  =======================================================================
+
+.. _ec2_key:
 
 Values returned by ec2_key module
 ---------------------------------
