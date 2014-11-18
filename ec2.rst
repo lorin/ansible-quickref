@@ -6,11 +6,121 @@ EC2 stuff
 Values returned by ec2 module
 ------------------------------
 
+This assumes you're using tagging.
+
+
+If the instances don't exist yet::
+
+ {
+        "changed": false,
+        "instance_ids": [
+           "i-db2fd037",
+        ],
+        "instances": [
+            {
+                "ami_launch_index": "0",
+                "architecture": "x86_64",
+                "dns_name": "ec2-54-173-62-41.compute-1.amazonaws.com",
+                "ebs_optimized": false,
+                "hypervisor": "xen",
+                "id": "i-db2fd037",
+                "image_id": "ami-9aaa1cf2",
+                "instance_type": "t2.micro",
+                "kernel": null,
+                "key_name": "mykey",
+                "launch_time": "2014-11-16T03:53:31.000Z",
+                "placement": "us-east-1d",
+                "private_dns_name": "ip-10-0-0-17.ec2.internal",
+                "private_ip": "10.0.0.17",
+                "public_dns_name": "ec2-54-173-62-41.compute-1.amazonaws.com",
+                "public_ip": "54.173.62.41",
+                "ramdisk": null,
+                "region": "us-east-1",
+                "root_device_name": "/dev/sda1",
+                "root_device_type": "ebs",
+                "state": "running",
+                "state_code": 16,
+                "virtualization_type": "hvm"
+            }
+        ]
+        "invocation": {
+            "module_args": "",
+            "module_name": "ec2"
+        },
+        "tagged_instances": [
+            {
+                "ami_launch_index": "0",
+                "architecture": "x86_64",
+                "dns_name": "ec2-54-173-62-41.compute-1.amazonaws.com",
+                "ebs_optimized": false,
+                "hypervisor": "xen",
+                "id": "i-db2fd037",
+                "image_id": "ami-9aaa1cf2",
+                "instance_type": "t2.micro",
+                "kernel": null,
+                "key_name": "mykey",
+                "launch_time": "2014-11-16T03:53:31.000Z",
+                "placement": "us-east-1d",
+                "private_dns_name": "ip-10-0-0-17.ec2.internal",
+                "private_ip": "10.0.0.17",
+                "public_dns_name": "ec2-54-173-62-41.compute-1.amazonaws.com",
+                "public_ip": "54.173.62.41",
+                "ramdisk": null,
+                "region": "us-east-1",
+                "root_device_name": "/dev/sda1",
+                "root_device_type": "ebs",
+                "state": "running",
+                "state_code": 16,
+                "virtualization_type": "hvm"
+            }
+        ]
+    }
+
+If the instances already exist::
+
+ {
+        "changed": false,
+        "instance_ids": null,
+        "instances": null,
+        "invocation": {
+            "module_args": "",
+            "module_name": "ec2"
+        },
+        "tagged_instances": [
+            {
+                "ami_launch_index": "0",
+                "architecture": "x86_64",
+                "dns_name": "ec2-54-173-62-41.compute-1.amazonaws.com",
+                "ebs_optimized": false,
+                "hypervisor": "xen",
+                "id": "i-db2fd037",
+                "image_id": "ami-9aaa1cf2",
+                "instance_type": "t2.micro",
+                "kernel": null,
+                "key_name": "mykey",
+                "launch_time": "2014-11-16T03:53:31.000Z",
+                "placement": "us-east-1d",
+                "private_dns_name": "ip-10-0-0-17.ec2.internal",
+                "private_ip": "10.0.0.17",
+                "public_dns_name": "ec2-54-173-62-41.compute-1.amazonaws.com",
+                "public_ip": "54.173.62.41",
+                "ramdisk": null,
+                "region": "us-east-1",
+                "root_device_name": "/dev/sda1",
+                "root_device_type": "ebs",
+                "state": "running",
+                "state_code": 16,
+                "virtualization_type": "hvm"
+            }
+        ]
+    }
+
 ===================  =======================================================================
 Parameter            Description
 ===================  =======================================================================
-instance_ids         List of instance ids
-instances            List of instance dicts (see table below)
+instance_ids         List of instance ids for new instaces
+instances            List of instance dicts for new instances (see table below)
+tagged_instances     List of instance dicts that already exist if exact_count is used
 ===================  =======================================================================
 
 EC2 instance dicts
