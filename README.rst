@@ -32,6 +32,7 @@ group_names                    A list of all groups that the current host is a m
 groups                         A dict whose keys are Ansible group names and values are list of hostnames that are members of the group. Includes ``all`` and ``ungrouped`` groups: ``{"all": [...], "web": [...], "ungrouped": [...]}``
 inventory_hostname             Name of the current host as known by ansible.
 play_hosts                     A list of inventory hostnames that are active in the current play (or current batch if running serial)
+ansible_version                A dict with ansible version info: ``{"full": 1.8.1", "major": 1, "minor": 8, "revision": 1, "string": "1.8.1"}``
 ============================   =========================================================================================================================================================================================================
 
 These can be useful if you want to use a variable associated with a different host. For
