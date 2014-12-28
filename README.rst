@@ -19,6 +19,13 @@ See ec2_.
 
 .. _ec2: ec2.rst
 
+Docker stuff
+============
+
+See docker_.
+
+.. _docker: docker.rst
+
 Built-in variables
 ==================
 
