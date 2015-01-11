@@ -4,15 +4,19 @@ EC2 stuff
 .. _ec2:
 
  * `Values returned by EC2 module <#values-returned-by-ec2-module>`_
+
    + `EC2 instance dicts <#ec2-instance-dicts>`_
- * [Values returned by ec2_vpc module](#values-returned-by-ec2_vpc-module)
-   + [subnet dict](#subnet-dict)
-   + [vpc dict](#vpc-dict)
- * [hostvars from ec2.py dynamic inventory script](#hostvars-from-ec2py-dynamic-inventory-script)
- * [Values returned by ec2_facts module](#values-returned-by-ec2_facts-module)
- * [Values returned by ec2_ami module](#values-returned-by-ec2_ami-module)
- * [Values returned by ec2_vol module](#values-returned-by-ec2_vol-module)
- * [Values returned by ec2_key module](#values-returned-by-ec2_key-module)
+
+ * `Values returned by ec2_vpc module <#values-returned-by-ec2_vpc-module>`_
+
+   + `subnet dict <#subnet-dict>`_
+   + `vpc dict <#vpc-dict>`_
+
+ * `hostvars from ec2.py dynamic inventory script <#hostvars-from-ec2py-dynamic-inventory-script>`_
+ * `Values returned by ec2_facts module <#values-returned-by-ec2_facts-module>`_
+ * `Values returned by ec2_ami module <#values-returned-by-ec2_ami-module>`_ 
+ * `Values returned by ec2_vol module <#values-returned-by-ec2_vol-module>`_ 
+ * `Values returned by ec2_key module <#values-returned-by-ec2_key-module>`_ 
 
 
 Values returned by ec2 module
