@@ -3,11 +3,11 @@ EC2 stuff
 
 .. _ec2:
 
- * values-returned-by-ec2-module_
-   * [EC2 instance dicts](#ec2-instance-dicts)
+ * `Values returned by EC2 module <#values-returned-by-ec2-module>`_
+   + `EC2 instance dicts <#ec2-instance-dicts>`_
  * [Values returned by ec2_vpc module](#values-returned-by-ec2_vpc-module)
-   * [subnet dict](#subnet-dict)
-   * [vpc dict](#vpc-dict)
+   + [subnet dict](#subnet-dict)
+   + [vpc dict](#vpc-dict)
  * [hostvars from ec2.py dynamic inventory script](#hostvars-from-ec2py-dynamic-inventory-script)
  * [Values returned by ec2_facts module](#values-returned-by-ec2_facts-module)
  * [Values returned by ec2_ami module](#values-returned-by-ec2_ami-module)
