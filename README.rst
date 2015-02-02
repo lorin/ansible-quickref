@@ -137,7 +137,7 @@ with_items          List of items to iterate over
 with_nested         List of list of items to iterate over in nested fashion
 with_fileglob       List of local files to iterate over, described using shell fileglob notation
                     (e.g., ``/playbooks/files/fooapp/*``)
-with_first_found    tbd
+with_first_found    Return the first file or path, in the given list, that exists on the control machine
 with_together       Dictionary of lists to iterate over in parallel
 with_random_choice  List of items to be selected from at random
 with_dict           Loop through the elements of a hash
