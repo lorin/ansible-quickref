@@ -150,8 +150,14 @@ always_run          If true, runs task even when in --check mode
 
 Complex args
 ============
-There are two ways to specify complex arguments, using the action/module parameter or using
-the args parameter.
+There are three ways to specify complex arguments:
+
+just pass them::
+
+    - ec2_tag:
+        resource: vol-abcdefg
+        tags:
+          Name: my-volume
 
 action/module parameter::
 
