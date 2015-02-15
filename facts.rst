@@ -2,7 +2,9 @@
 Facts
 =====
 
-Example facts generated from a Vagrant instance. Facts that start with ``facter_``
+Example facts generated from a Vagrant instance. 
+
+Facts that start with ``facter_``
 will only be collected if the facter_ program is present. Facts that start with
 ``ohai_`` will only be present if the ohai_ program is present::
 
