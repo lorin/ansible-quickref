@@ -101,8 +101,7 @@ su_user
 sudo                 Boolean that indicates whether ansible should use sudo (e.g., ``True``).
 sudo_user            If sudo'ing, user to sudo as. Defaults: ``root``.
 tasks                List of tasks.
-user                 User to ssh as. Default: ``root`` (unless overriden in config file)
-                     time. (e.g., ``3``).
+user                 User to ssh as. Default: ``root`` (unless overridden in config file)
 no_log
 vars                 Dictionary of variables.
 vars_files           List of files that contain dictionary of variables.
