@@ -87,7 +87,9 @@ gather_facts         Specify whether to gather facts or not
 handlers             List of handlers
 hosts                Hosts in the play (e.g., ``webservers``).
 include              Include a playbook defined in another file
-max_fail_percentage
+max_fail_percentage  When ``serial`` is set on a play, and some hosts fail on a
+                     task, if the percentage of hosts that fail exceeds this
+                     number, Ansible will fail the whole play. (e.g., ``20``).
 name                 Name of the play, displayed when play runs (e.g., ``Deploy a foo``).
 pre_tasks            List of tasks to execute before roles.
 port                 Remote ssh port to connect to
