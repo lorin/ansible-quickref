@@ -40,6 +40,7 @@ groups                         A dict whose keys are Ansible group names and val
 inventory_hostname             Name of the current host as known by ansible.
 play_hosts                     A list of inventory hostnames that are active in the current play (or current batch if running serial)
 ansible_version                A dict with ansible version info: ``{"full": 1.8.1", "major": 1, "minor": 8, "revision": 1, "string": "1.8.1"}``
+role_path                      The current role’s pathname (available only inside a role)
 ============================   =========================================================================================================================================================================================================
 
 These can be useful if you want to use a variable associated with a different host. For
@@ -124,6 +125,7 @@ include             Name of a separate YAML file that includes additional tasks.
 register            Record the result to the specified variable (e.g., ``result``)
 delegate_to         Run task on specified host instead.
 local_action        Equivalent to: ``delegate_to: 127.0.0.1``.
+remote_user         Alias for ``user``.
 user                User to ssh as for this task
 sudo                Boolean that indicates whether ansible should use sudo on this task
 sudo_user           If sudo'ing, user to sudo as.
