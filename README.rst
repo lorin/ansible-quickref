@@ -144,6 +144,7 @@ with_first_found    Return the first file or path, in the given list, that exist
 with_together       Dictionary of lists to iterate over in parallel
 with_random_choice  List of items to be selected from at random
 with_dict           Loop through the elements of a hash
+with_sequence       Loop over a range of integers
 until               Boolean, task will retry until evaluates true or until ``retries``
 retries             Used with "until", number of times to retry. Default: ``3``
 delay               Used with "until", seconds to wait between retries. Default: ``10``
