@@ -101,8 +101,10 @@ roles                List of roles.
 serial               Integer that indicates how many hosts Ansible should manage at a single
 su
 su_user
-sudo                 Boolean that indicates whether ansible should use sudo (e.g., ``True``).
-sudo_user            If sudo'ing, user to sudo as. Defaults: ``root``.
+become               Boolean that indicates whether ansible should become another user (e.g., ``True``).
+become_user          If become'ing,  user to become as. Defaults: ``root``.
+sudo                 (deprecated, use become) Boolean that indicates whether ansible should use sudo (e.g., ``True``).
+sudo_user            (deprecated, use become_uesr) If sudo'ing,  user to sudo as. Defaults: ``root``.
 tasks                List of tasks.
 user                 User to ssh as. Default: ``root`` (unless overridden in config file)
 no_log
