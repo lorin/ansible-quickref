@@ -129,6 +129,8 @@ delegate_to         Run task on specified host instead.
 local_action        Equivalent to: ``delegate_to: 127.0.0.1``.
 remote_user         Alias for ``user``.
 user                User to ssh as for this task
+become              Boolean that indicates whether ansible should become another user (e.g., ``True``).
+become_user         If become'ing,  user to become as. Defaults: ``root``.
 sudo                Boolean that indicates whether ansible should use sudo on this task
 sudo_user           If sudo'ing, user to sudo as.
 when                Boolean. Only run task when this evaluates to True. Default: ``True``
