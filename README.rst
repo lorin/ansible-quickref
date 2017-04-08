@@ -108,7 +108,7 @@ sudo_user            (deprecated, use become_uesr) If sudo'ing,  user to sudo as
 tasks                List of tasks.
 user                 User to ssh as. Default: ``root`` (unless overridden in config file)
 no_log
-vars                 Dictionary of variables.
+vars                 Dictionary of variables. **this is the holy grail of variables, it will output everything!**
 vars_files           List of files that contain dictionary of variables.
 vars_prompt          Description of vars that user will be prompted to specify.
 vault_password
